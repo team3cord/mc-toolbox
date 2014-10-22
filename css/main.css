@@ -146,25 +146,32 @@ textarea {
     float: left;
     width: 100%;
     min-height: 80px;
-    padding: 0 10%;
-    background-color: #96c8e3;
+    background-color: #000000;
 
 }
 .logo-mc {
     float: left;
     width: 26%;
     padding-left: 5px;
+    margin-left: 3%;
+    background: #00ff00;
 }
 .logo-mc img {
+    width: 100%;
     max-width: 300px;
+    height: 80px;
+}
+.mobile-menu-drop {
+    display: none;
 }
 .main-nav {
     font-family: 'TradeGothic LtStd bdcn20', sans-serif;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    float: left;
+    float: right;
     width: 54%;
+    margin-right: 3%;
 }
 .main-nav ul {
     float: right;
@@ -177,12 +184,17 @@ textarea {
     float: left;
     margin: 0;
     padding: 33px 15px;
+    background: #ff00ff;
+}
+.main-nav ul li:last-of-type {
+    padding-right: 1px;
 }
 .main-nav ul li:hover > ul.sub-nav {
     display: block;
 }
 .main-nav ul li a {
     float: left;
+    display: inline-block;
     text-decoration: none;
     color: #ffffff;
 }
@@ -190,10 +202,11 @@ textarea {
 
 .sub-nav {
     position: absolute;
+    z-index: 2;
     top: 80px;
     left: 0;
     float: left!important;
-    background-color: #ff00ff;
+    background-color: #ff0000;
     display: none;
 }
 .sub-nav li.sub-nav-item {
@@ -202,8 +215,99 @@ textarea {
     padding: 19px 15px;
 }
 .sub-nav li.sub-nav-item a {
+    white-space: nowrap;
     color: #96c8e3;
 }
+@media only screen and (max-width:1045px){
+    .logo-mc {
+        width: 29%;
+        margin-left: 2%;
+    }
+    .main-nav {
+        width: 64%;
+        margin-right: 1%;
+
+    }
+}
+@media only screen and (max-width:880px){
+    .logo-mc {
+        width: 25%;
+        margin-left: 1%;
+    }
+    .logo-mc img {
+        height: 60px;
+        padding-top: 10px;
+    }
+    .main-nav {
+        width: 72%;
+        margin-right: 1%;
+    }
+}
+@media only screen and (max-width:880px){
+   .logo-mc {
+       float: none;
+       width: 100%;
+       margin: 0 auto;
+       text-align: center;
+   }
+    .logo-mc img {
+        width: 300px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .main-nav {
+        float: none;
+        width: 75%;
+        margin-right: 13%;
+        margin-left: 11%;
+    }
+}
+@media only screen and (max-width:750px){
+    .main-nav {
+        width: 80%;
+        margin-right: 8%;
+        margin-left: 7%;
+    }
+}
+@media only screen and (max-width:703px){
+    .logo-mc {
+        float: left;
+        width: 85%;
+    }
+    .mobile-menu-drop {
+        display: block;
+        float: left;
+        width: 12%;
+        height: 61px;
+        padding-top: 29px;
+        background: #b3d4fc;
+    }
+    .main-nav {
+        position: absolute;
+        top:70px;
+        right: 1px;
+        width: 25%;
+        margin:0;
+    }
+    .main-nav ul {
+        width: 200px;
+        display: none;
+    }
+    .main-nav ul li {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .main-nav ul li a {
+        float: none;
+    }
+
+}
+
+
+
+
 
 /* ==========================================================================
    TYPOGRAPHY MC

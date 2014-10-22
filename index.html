@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -29,7 +30,11 @@
                 </a>
             </h1>
         </div>
-
+        <div class="mobile-menu-drop">
+            <a id="mcmobile-btn" href="#">
+                <img src="img/menu-icon.png">
+            </a>
+        </div>
         <!--Main navigation.-->
         <nav id="main-navigation" class="main-nav" data-content-field="navigation-mainNav">
            <ul class="main-nav-list">
@@ -96,6 +101,18 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            jQuery(function($){
+                $('.mobile-menu-drop a').on('click', function(e){
+                    e.preventDefault();
+                    $('.main-nav ul').slideToggle('slow', function(){
+                        // animation complete
+                        console.log('Animation Complete');
+                    })
+                });
+                $()
+            });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
